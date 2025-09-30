@@ -32,7 +32,7 @@ jobs:
 
       - name: Run stalk script (scheduled)
         if: github.event_name == 'schedule'
-        run: node main.js --follow-only
+        run: node main.js
         env:
           GITHUB_TOKEN: ${{ secrets.STALK_TOKEN }}
 
